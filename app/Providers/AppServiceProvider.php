@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\ServiceProvider;
-
+use BezhanSalleh\FilamentLanguageSwitch\LanguageSwitch;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -20,6 +20,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        LanguageSwitch::configureUsing(function (LanguageSwitch $switch) {
+            $switch
+                ->visible(outsidePanels: true)
+                ->locales(['en','fr']); // also accepts a closure
+        });
         Vite::prefetch(concurrency: 3);
     }
 }

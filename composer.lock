@@ -4,8 +4,66 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eb9d18fba0e39b4d77c617c2e7cf830b",
+    "content-hash": "03ad6e56bc535d202db70aeeb7e69a0f",
     "packages": [
+        {
+            "name": "andreiio/blade-remix-icon",
+            "version": "3.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andreiio/blade-remix-icon.git",
+                "reference": "c70c6f3e9b578aed9ab5901171aa2286ac1a58e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andreiio/blade-remix-icon/zipball/c70c6f3e9b578aed9ab5901171aa2286ac1a58e8",
+                "reference": "c70c6f3e9b578aed9ab5901171aa2286ac1a58e8",
+                "shasum": ""
+            },
+            "require": {
+                "blade-ui-kit/blade-icons": "^1.0",
+                "php": "^7.4|^8.0|^8.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0|^7.0|^8.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "AndreiIonita\\BladeRemixIcon\\BladeRemixIconServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AndreiIonita\\BladeRemixIcon\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrei Ioniță",
+                    "homepage": "https://andrei.io"
+                }
+            ],
+            "description": "A package to easily make use of Remix Icon in your Laravel Blade views.",
+            "support": {
+                "issues": "https://github.com/andreiio/blade-remix-icon/issues",
+                "source": "https://github.com/andreiio/blade-remix-icon/tree/3.6.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/code4romania",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-12-17T18:28:03+00:00"
+        },
         {
             "name": "anourvalar/eloquent-serialize",
             "version": "1.2.29",
@@ -71,6 +129,81 @@
                 "source": "https://github.com/AnourValar/eloquent-serialize/tree/1.2.29"
             },
             "time": "2025-02-25T05:18:46+00:00"
+        },
+        {
+            "name": "bezhansalleh/filament-language-switch",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bezhanSalleh/filament-language-switch.git",
+                "reference": "29d724e38a6e112b0e36b9f9059a18461ec92f0f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bezhanSalleh/filament-language-switch/zipball/29d724e38a6e112b0e36b9f9059a18461ec92f0f",
+                "reference": "29d724e38a6e112b0e36b9f9059a18461ec92f0f",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "php": "^8.1|^8.2|^8.3",
+                "spatie/laravel-package-tools": "^1.9"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^6.0|^7.0|8.0",
+                "orchestra/testbench": "^7.0|^8.0|^9.0",
+                "pestphp/pest": "^2.34",
+                "pestphp/pest-plugin-laravel": "^2.3",
+                "spatie/laravel-ray": "^1.26"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BezhanSalleh\\FilamentLanguageSwitch\\FilamentLanguageSwitchServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BezhanSalleh\\FilamentLanguageSwitch\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bezhan Salleh",
+                    "email": "bezhan_salleh@yahoo.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Zero config Language Switch(Changer/Localizer) plugin for filamentphp admin",
+            "homepage": "https://github.com/bezhansalleh/filament-language-switch",
+            "keywords": [
+                "bezhanSalleh",
+                "filament-language-changer",
+                "filament-language-switch",
+                "filament-locale-changer",
+                "filament-localizer",
+                "filament-plugin",
+                "filamentphp",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/bezhanSalleh/filament-language-switch/issues",
+                "source": "https://github.com/bezhanSalleh/filament-language-switch/tree/3.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/bezhanSalleh",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-04-01T18:28:29+00:00"
         },
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -5022,6 +5155,89 @@
                 }
             ],
             "time": "2025-02-06T14:58:20+00:00"
+        },
+        {
+            "name": "spatie/laravel-permission",
+            "version": "6.16.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-permission.git",
+                "reference": "4fa03c06509e037a4d42c131d0f181e3e4bbd483"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/4fa03c06509e037a4d42c131d0f181e3e4bbd483",
+                "reference": "4fa03c06509e037a4d42c131d0f181e3e4bbd483",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/auth": "^8.12|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/container": "^8.12|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/contracts": "^8.12|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/database": "^8.12|^9.0|^10.0|^11.0|^12.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "laravel/passport": "^11.0|^12.0",
+                "laravel/pint": "^1.0",
+                "orchestra/testbench": "^6.23|^7.0|^8.0|^9.0|^10.0",
+                "phpunit/phpunit": "^9.4|^10.1|^11.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Permission\\PermissionServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "6.x-dev",
+                    "dev-master": "6.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Spatie\\Permission\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Permission handling for Laravel 8.0 and up",
+            "homepage": "https://github.com/spatie/laravel-permission",
+            "keywords": [
+                "acl",
+                "laravel",
+                "permission",
+                "permissions",
+                "rbac",
+                "roles",
+                "security",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-permission/issues",
+                "source": "https://github.com/spatie/laravel-permission/tree/6.16.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-02-28T20:29:57+00:00"
         },
         {
             "name": "symfony/clock",

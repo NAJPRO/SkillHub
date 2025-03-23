@@ -3,21 +3,34 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\CategoryResource\Pages;
-use App\Filament\Resources\CategoryResource\RelationManagers;
 use App\Models\Category;
+use Filament\Actions\CreateAction;
+use Filament\Actions\EditAction;
 use Filament\Forms;
+use Filament\Forms\Components\Actions;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-
+use Illuminate\Support\Str;
 class CategoryResource extends Resource
 {
     protected static ?string $model = Category::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    public static function getActions(): array
+    {
+        return [
+            CreateAction::make()
+                ->modal(), // Active l'affichage dans une modal
+
+            EditAction::make()
+                ->modal(), // Active aussi l'édition en modal
+        ];
+    }
 
     public static function form(Form $form): Form
     {
@@ -25,7 +38,11 @@ class CategoryResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('name')
                     ->required()
-                    ->maxLength(255),
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state)))
+                    ->maxLength(255)
+                    ->unique(),
+
                 Forms\Components\TextInput::make('slug')
                     ->disabled(),
 

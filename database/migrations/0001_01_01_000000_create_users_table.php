@@ -15,9 +15,17 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->enum('role', ['client', 'freelance', 'admin'])->default('client');
+            $table->enum('role', ['client', 'freelance', 'admin', 'super-admin'])->default('client');
+            $table->enum('status', ['active', 'inactive', 'suspended', 'banished', 'not-verified'])->default('not-verified');
+
             $table->text('bio')->nullable();
             $table->string('profile_picture')->nullable();
+            $table->string('link_github')->nullable();
+            $table->string('link_site_web')->nullable();
+            $table->string('link_instagram')->nullable();
+            $table->string('link_linkedin')->nullable();
+
+
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
